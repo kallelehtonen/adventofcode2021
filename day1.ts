@@ -3,7 +3,7 @@ import * as fs from "fs";
 const input = fs.readFileSync("./input/day1.txt", "utf-8");
 const inputArray: string[] = input.split("\n");
 
-function day1a() {
+function day1a(): number {
   let count = 0;
 
   inputArray.forEach((line: string, index: number) => {
@@ -12,10 +12,10 @@ function day1a() {
     }
   });
 
-  console.log(count);
+ return count;
 }
 
-function day1b() {
+function day1b(): number {
   let count = 0;
   const sums: number[] = inputArray.map((line: string, index: number) => {
     return +line + +inputArray[index - 1] + +inputArray[index - 2];
@@ -27,8 +27,8 @@ function day1b() {
     }
   });
 
-  console.log(count);
+  return count;
 }
 
-day1a();
-day1b();
+console.log("a: " + day1a());
+console.log("b: " + day1b());
