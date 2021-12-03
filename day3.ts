@@ -27,13 +27,10 @@ function day3a(): number {
 
 function day3b(): number {
   let oxygen = "";
-  let oxygenArray: string[] = [];
+  let oxygenArray = inputArray;
   let co2 = "";
-  let co2Array: string[] = [];
-  const binLength = inputArray[0].trim().length;
-
-  oxygenArray = inputArray;
-  co2Array = inputArray;
+  let co2Array = inputArray;
+  const binLength = inputArray[0].length;
 
   for (let i = 0; i < binLength; i++) {
     if (oxygenArray.length === 1 && co2Array.length === 1) {
