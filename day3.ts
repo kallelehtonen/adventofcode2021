@@ -52,7 +52,7 @@ function day3b(): number {
 }
 
 function bin2dec(bin: string): number {
-  return +parseInt(bin, 2).toString(10);
+  return parseInt(bin, 2);
 }
 
 function findBit(input: string[], index: number, type: string): string {
