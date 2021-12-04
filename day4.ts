@@ -67,7 +67,7 @@ function day4b(): number {
       lastDrawnNumber = drawNumber(numbers);
 
       for (let boardIndex = 0; boardIndex < boards.length; boardIndex++) {
-        if (winnerBoards.find((board: number) => board === boardIndex)) {
+        if (winnerBoards.includes(boardIndex)) {
           continue;
         }
 
