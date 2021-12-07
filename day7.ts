@@ -8,8 +8,8 @@ function day7a(): number {
   const target: number = median(originalPositions);
 
   return originalPositions
-    .filter((grab: number) => grab !== target)
-    .reduce((prev: number, grab: number) => prev + Math.abs(grab - target), 0);
+    .filter((crab: number) => crab !== target)
+    .reduce((prev: number, crab: number) => prev + Math.abs(crab - target), 0);
 }
 
 function day7b(): number {
@@ -17,8 +17,8 @@ function day7b(): number {
   const target: number = average(originalPositions);
 
   return originalPositions
-    .filter((grab: number) => grab !== target)
-    .reduce((prev: number, grab: number) => prev + consumption(grab, target), 0);
+    .filter((crab: number) => crab !== target)
+    .reduce((prev: number, crab: number) => prev + consumption(crab, target), 0);
 }
 
 const median = (input: number[]): number => {
