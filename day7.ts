@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import * as fs from "fs";
 
 const input = fs.readFileSync("./input/day7.txt", "utf-8").trim();
 const positions: number[] = input.split(",").map(Number);
