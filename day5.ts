@@ -67,8 +67,13 @@ function day5a(): number {
   return Array.from(coordsCount.values()).filter((count: number) => count > 1).length;
 }
 
+function day5b(): number {
+  return 0;
+}
+
 function addCount(map: Map<string, number>, a: number, b: number): void {
   map.set(`${a},${b}`, (map.get(`${a},${b}`) || 0) + 1);
 }
 
 console.log("a: " + day5a());
+console.log("b: " + day5b());
