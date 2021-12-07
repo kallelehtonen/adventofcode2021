@@ -40,8 +40,7 @@ class VentLine {
         break;
 
       case Direction.diagonal:
-      default:
-        this.length = 0;
+        this.length = (Math.abs(this.x1 - this.x2) + Math.abs(this.y1 - this.y2)) / 2;
         break;
     }
   }
