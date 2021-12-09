@@ -8,7 +8,7 @@ function day2a(): number {
   let depth = 0;
 
   inputArray.forEach((line: string) => {
-    const [ direction, value ] = line.split(" ");
+    const [direction, value] = line.split(" ");
 
     switch (direction) {
       case "forward":
@@ -34,7 +34,7 @@ function day2b(): number {
   let aim = 0;
 
   inputArray.forEach((line: string) => {
-    const [ direction, value ] = line.split(" ");
+    const [direction, value] = line.split(" ");
 
     switch (direction) {
       case "forward":

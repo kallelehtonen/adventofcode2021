@@ -1,7 +1,7 @@
 import * as fs from "fs";
 
 const input = fs.readFileSync("./input/day4.txt", "utf-8").trim();
-const [ numbers, ...boards ] = input.split("\n\r");
+const [numbers, ...boards] = input.split("\n\r");
 const numberArray: number[] = numbers.trim().split(",").map(Number);
 
 function day4a(): number {
@@ -25,7 +25,10 @@ function day4a(): number {
           const rowNumbers: number[] = rows[rowIndex].trim().split(/\s+/).map(Number);
 
           if (initRun) {
-            boardSums.set(boardIndex, (boardSums.get(boardIndex) || 0) + rowNumbers.map(Number).reduce((accumulator, curr) => accumulator + curr));
+            boardSums.set(boardIndex, (boardSums.get(boardIndex) || 0) + rowNumbers.map(Number).reduce((
+              accumulator,
+              curr
+            ) => accumulator + curr));
           }
 
           for (let colIndex = 0; colIndex < rowNumbers.length; colIndex++) {
@@ -113,13 +116,13 @@ function drawNumber(numbers: number[]): number {
 }
 
 function updateCount(map: Map<string, number>, board: number, index: number): void {
-  const key = `${board}.${index}`;
+  const key = `${ board }.${ index }`;
 
   map.set(key, (map.get(key) || 0) + 1);
 }
 
 function checkStatus(map: Map<string, number>, board: number, index: number): boolean {
-  const key = `${board}.${index}`;
+  const key = `${ board }.${ index }`;
 
   return map.get(key) === 5;
 }

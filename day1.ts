@@ -12,7 +12,7 @@ function day1a(): number {
     }
   });
 
- return count;
+  return count;
 }
 
 function day1b(): number {

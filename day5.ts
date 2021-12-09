@@ -72,7 +72,7 @@ function day5b(): number {
 }
 
 function addCount(map: Map<string, number>, a: number, b: number): void {
-  map.set(`${a},${b}`, (map.get(`${a},${b}`) || 0) + 1);
+  map.set(`${ a },${ b }`, (map.get(`${ a },${ b }`) || 0) + 1);
 }
 
 console.log("a: " + day5a());
